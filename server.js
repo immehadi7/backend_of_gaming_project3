@@ -9,6 +9,7 @@ import authRoutes from "./routes/authRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
+import superAdminRoutes from "./routes/superAdminRoutes.js";
 
 import { setIO } from "./socket.js";
 import { handleAIResponse } from "./services/aiService.js";
@@ -78,6 +79,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/employee", employeeRoutes);
+app.use("/api/superadmin", superAdminRoutes);
 
 // ── 404 fallback ─────────────────────────────────────────────────────────────
 app.use("/api", (req, res) => {
